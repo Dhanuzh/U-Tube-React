@@ -43,7 +43,7 @@ a {
   align-items: center;
   justify-content: start;
   cursor: pointer;
-  background: transparent;
+  background-color: white;
   outline: none;
   border: none;
   padding: 7px 15px;
@@ -51,6 +51,11 @@ a {
   border-radius: 20px;
   transition: all 0.3s ease;
 }
+
+/* .backtest { */
+/*   background-image: linear-gradient(to right, orange, yellow); */
+/* } */
+
 @media screen and (max-width: 900px) {
   .category-btn {
     margin: 10px;
