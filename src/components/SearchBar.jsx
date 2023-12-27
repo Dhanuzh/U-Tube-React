@@ -22,7 +22,7 @@ const SearchBar = () => {
         className="search-bar"
         placeholder="Search here.."
         value=""
-        onSubmit={() => {}}
+        onChange={() => {}}
       />
       <IconButton
         type="submit"
