@@ -9,7 +9,7 @@ import ReactPlayer from "react-player";
 const VideoDetails = () => {
   const [videoDetails, setVideoDetails] = useState(null);
   const { id } = useParams();
-  const [videos, setVideos] = useState("");
+  const [video, setVideo] = useState(null);
 
   useEffect(() => {
     fetchFromAPI(`videos?part=snippet,statistics&id=${id}`).then((data) =>
@@ -17,7 +17,7 @@ const VideoDetails = () => {
     );
 
     fetchFromAPI(`search?part=snippet&relatedToVideoIt=${id}&type=video`).then(
-      (data) => setVideos(data.items),
+      (data) => setVideo(data.items),
     );
   }, [id]);
 
@@ -32,7 +32,7 @@ const VideoDetails = () => {
     <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>
         <Box flex={1}>
-          <Box sx={{ width: "100%", position: "fixed", top: "86px" }}>
+          <Box sx={{ width: "100%", position: "-webkit-sticky", top: "86px" }}>
             <ReactPlayer
               url={`https://www.youtube.com/watch?v=${id}`}
               className="react-player"
@@ -75,6 +75,15 @@ const VideoDetails = () => {
               </Stack>
             </Stack>
           </Box>
+        </Box>
+        <Box
+          px={2}
+          py={{ md: 1, xs: 5 }}
+          k
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Video videos={video} direction="column" />
         </Box>
       </Stack>
     </Box>
