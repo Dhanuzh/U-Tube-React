@@ -5,7 +5,6 @@ import {
   NavBar,
   Feed,
   SearchFeed,
-  SearchBar,
   ChannelDetails,
   VideoDetails,
 } from "./components/index";

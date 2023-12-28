@@ -60,11 +60,11 @@ a {
   .category-btn {
     margin: 10px;
   }
-}
-@media screen and (max-width: 800px) {
   .copyright {
     display: none !important;
   }
+}
+@media screen and (max-width: 800px) {
 }
 @media screen and (max-width: 600px) {
   .scroll-horizontal {
@@ -75,5 +75,16 @@ a {
   }
   .search-bar {
     width: 200px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .search-bar {
+    width: 150px;
+  }
+  .scroll-horizontal {
+    overflow: auto !important;
+  }
+  .react-player {
+    height: 45vh !important;
   }
 }
