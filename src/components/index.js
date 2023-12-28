@@ -6,3 +6,5 @@ export { default as Feed } from "../components/Feed";
 export { default as SearchBar } from "../components/SearchBar";
 export { default as SideBar } from "../components/SideBar";
 export { default as Video } from "../components/Video";
+export { default as VideoCard } from "../components/VideoCard";
+export { default as ChannelCard } from "../components/ChannelCard";
